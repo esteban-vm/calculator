@@ -1,0 +1,334 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, var(--color-lighter-blue), var(--color-darker-blue));
+}
+
+.emotion-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(7, calc(100% / 7));
+  width: 400px;
+  height: 650px;
+  box-shadow: 2px 2px 10px var(--color-darker);
+  border-radius: 10px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .emotion-1 {
+    width: 90%;
+    height: 70%;
+  }
+
+  @media (orientation: landscape) {
+    .emotion-1 {
+      width: 50%;
+      height: 90%;
+    }
+  }
+}
+
+.emotion-2 {
+  grid-column: 1/-1;
+  grid-row: 1/span 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--color-dark);
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: right;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.emotion-3 {
+  color: var(--color-light);
+  font-size: 1.5rem;
+}
+
+.emotion-4 {
+  color: var(--color-white);
+  font-size: 3rem;
+}
+
+.emotion-5 {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 2rem;
+  border: 1px outset var(--color-white);
+  outline: none;
+  background-color: skyblue;
+}
+
+.emotion-5:active {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .emotion-5:hover {
+    background-color: var(--color-lighter);
+  }
+}
+
+.emotion-8 {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 2rem;
+  border: 1px outset var(--color-white);
+  outline: none;
+  background-color: gray;
+}
+
+.emotion-8:active {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .emotion-8:hover {
+    background-color: var(--color-lighter);
+  }
+}
+
+.emotion-9 {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 2rem;
+  border: 1px outset var(--color-white);
+  outline: none;
+  background-color: var(--color-light);
+}
+
+.emotion-9:active {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .emotion-9:hover {
+    background-color: var(--color-lighter);
+  }
+}
+
+.emotion-21 {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 2rem;
+  border: 1px outset var(--color-white);
+  outline: none;
+  border-bottom-left-radius: 10px;
+  background-color: skyblue;
+}
+
+.emotion-21:active {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .emotion-21:hover {
+    background-color: var(--color-lighter);
+  }
+}
+
+.emotion-23 {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 2rem;
+  border: 1px outset var(--color-white);
+  outline: none;
+  grid-column: span 2;
+  border-bottom-right-radius: 10px;
+  background-color: gray;
+}
+
+.emotion-23:active {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .emotion-23:hover {
+    background-color: var(--color-lighter);
+  }
+}
+
+<main
+    class="emotion-0"
+  >
+    <section
+      aria-label="Calculator"
+      class="emotion-1"
+    >
+      <header
+        class="emotion-2"
+      >
+        <div
+          class="emotion-3"
+        >
+           
+        </div>
+        <div
+          class="emotion-4"
+        />
+      </header>
+      <button
+        class="emotion-5"
+        title="All clear"
+      >
+        AC
+      </button>
+      <button
+        class="emotion-5"
+        title="Clear entry"
+      >
+        CE
+      </button>
+      <button
+        class="emotion-5"
+        title="Toggle sign"
+      >
+        +/-
+      </button>
+      <button
+        class="emotion-8"
+        title="Divide"
+      >
+        ÷
+      </button>
+      <button
+        class="emotion-9"
+      >
+        7
+      </button>
+      <button
+        class="emotion-9"
+      >
+        8
+      </button>
+      <button
+        class="emotion-9"
+      >
+        9
+      </button>
+      <button
+        class="emotion-8"
+        title="Multiply"
+      >
+        ×
+      </button>
+      <button
+        class="emotion-9"
+      >
+        4
+      </button>
+      <button
+        class="emotion-9"
+      >
+        5
+      </button>
+      <button
+        class="emotion-9"
+      >
+        6
+      </button>
+      <button
+        class="emotion-8"
+        title="Add"
+      >
+        +
+      </button>
+      <button
+        class="emotion-9"
+      >
+        1
+      </button>
+      <button
+        class="emotion-9"
+      >
+        2
+      </button>
+      <button
+        class="emotion-9"
+      >
+        3
+      </button>
+      <button
+        class="emotion-8"
+        title="Subtract"
+      >
+        -
+      </button>
+      <button
+        class="emotion-21"
+        title="Decimal point"
+      >
+        .
+      </button>
+      <button
+        class="emotion-9"
+      >
+        0
+      </button>
+      <button
+        class="emotion-23"
+        title="Equals"
+      >
+        =
+      </button>
+    </section>
+  </main>
+</DocumentFragment>
+`;

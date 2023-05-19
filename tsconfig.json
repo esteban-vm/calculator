@@ -20,9 +20,8 @@
     "noFallthroughCasesInSwitch": true,
 
     "baseUrl": "src",
-    "paths": {
-      "@/*": ["./*", "./utils/*"]
-    }
+    "paths": { "@/*": ["./*", "./utils/*"] },
+    "types": ["vitest/globals"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
