@@ -1,7 +1,7 @@
 import { renderHook } from '@/tests'
 import useCalculator from './useCalculator'
 
-describe('USE CALCULATOR TEST SUITE', () => {
+describe('USE CALCULATOR TEST SUITE:', () => {
   it('should return the correct initial values', () => {
     const { result } = renderHook(useCalculator)
     const { current, previous, operation } = result.current

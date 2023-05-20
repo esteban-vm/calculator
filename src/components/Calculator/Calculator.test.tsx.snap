@@ -17,7 +17,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to right, var(--color-lighter-blue), var(--color-darker-blue));
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
 }
 
 .emotion-1 {
@@ -136,7 +136,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   font-size: 2rem;
   border: 1px outset var(--color-white);
   outline: none;
-  background-color: var(--color-light);
+  background-color: #ffffffbf;
 }
 
 .emotion-9:active {
@@ -178,7 +178,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   }
 }
 
-.emotion-23 {
+.emotion-24 {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -187,12 +187,11 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   font-size: 2rem;
   border: 1px outset var(--color-white);
   outline: none;
-  grid-column: span 2;
   border-bottom-right-radius: 10px;
   background-color: gray;
 }
 
-.emotion-23:active {
+.emotion-24:active {
   -webkit-transform: scale(0.98);
   -moz-transform: scale(0.98);
   -ms-transform: scale(0.98);
@@ -200,7 +199,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .emotion-23:hover {
+  .emotion-24:hover {
     background-color: var(--color-lighter);
   }
 }
@@ -323,7 +322,12 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
         0
       </button>
       <button
-        class="emotion-23"
+        class="emotion-5"
+      >
+        🌑
+      </button>
+      <button
+        class="emotion-24"
         title="Equals"
       >
         =

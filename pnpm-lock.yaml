@@ -81,6 +81,9 @@ devDependencies:
   typescript:
     specifier: ^5.0.2
     version: 5.0.2
+  use-local-storage:
+    specifier: ^3.0.0
+    version: 3.0.0(react@18.2.0)
   vite:
     specifier: ^4.3.2
     version: 4.3.2(@types/node@20.2.1)
@@ -3627,6 +3630,14 @@ packages:
     dependencies:
       querystringify: 2.2.0
       requires-port: 1.0.0
+    dev: true
+
+  /use-local-storage@3.0.0(react@18.2.0):
+    resolution: {integrity: sha512-wlPNnBCG3ULIJMr5A+dvWqLiPWCfsN1Kwijq+sAhT5yV4ex0u6XmZuNwP+RerIOfzBuz1pwSZuzhZMiluGQHfQ==}
+    peerDependencies:
+      react: '>=16.8.1'
+    dependencies:
+      react: 18.2.0
     dev: true
 
   /v8-to-istanbul@9.1.0:

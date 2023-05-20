@@ -1,8 +1,9 @@
 import type { FC } from 'react'
-import { useCalculator } from '@/hooks'
+import { useCalculator, useTheme } from '@/hooks'
 import * as Styled from './Calculator.styled'
 
 const Calculator: FC = () => {
+  const { name: themeName, toggle: toggleTheme } = useTheme()
   const { previous, current, operation, appendValue, clearEntry, clearAll, chooseOperation, getResult, toggleSign } =
     useCalculator()
 
@@ -55,7 +56,10 @@ const Calculator: FC = () => {
           .
         </Styled.Button>
         <Styled.Button onClick={appendValue}>0</Styled.Button>
-        <Styled.Button rounded='right' spanned operation onClick={getResult} title='Equals'>
+        <Styled.Button control onClick={toggleTheme}>
+          {themeName === 'dark' ? '☀️' : '🌑'}
+        </Styled.Button>
+        <Styled.Button rounded='right' operation onClick={getResult} title='Equals'>
           =
         </Styled.Button>
       </Styled.Container>

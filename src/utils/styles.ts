@@ -1,4 +1,36 @@
-import { css } from '@emotion/react'
+import { css, type Theme } from '@emotion/react'
+
+const light: Theme = {
+  name: 'light',
+  colors: {
+    background: {
+      primary: '#56ccf2',
+      secondary: '#2f80ed',
+    },
+    button: {
+      basic: '#ffffffbf',
+      control: 'skyblue',
+      operation: 'gray',
+    },
+  },
+}
+
+const dark: Theme = {
+  name: 'dark',
+  colors: {
+    background: {
+      primary: '#56ccf2',
+      secondary: '#2f80ed',
+    },
+    button: {
+      basic: '#ffffffbf',
+      control: 'skyblue',
+      operation: 'gray',
+    },
+  },
+}
+
+export const themes: Record<Theme['name'], Theme> = { light, dark }
 
 enum devices {
   /** smartphones, touchscreens */
@@ -18,8 +50,6 @@ export const globalStyles = css`
 
   :root {
     --color-white: #fff;
-    --color-lighter-blue: #56ccf2;
-    --color-darker-blue: #2f80ed;
     --color-dark: rgba(60, 64, 67, 0.75);
     --color-darker: #333;
     --color-light: rgba(255, 255, 255, 0.75);

@@ -6,7 +6,12 @@ export const Wrapper = styled.main`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to right, var(--color-lighter-blue), var(--color-darker-blue));
+
+  ${({ theme }) => {
+    return css`
+      background: linear-gradient(to right, ${theme.colors.background.primary}, ${theme.colors.background.secondary});
+    `
+  }}
 `
 
 export const Container = styled.section`
@@ -54,7 +59,7 @@ export const Current = styled.div`
   font-size: 3rem;
 `
 
-type ButtonProps = { spanned?: boolean; rounded?: 'right' | 'left'; operation?: boolean; control?: boolean }
+type ButtonProps = { rounded?: 'right' | 'left'; operation?: boolean; control?: boolean }
 
 export const Button = styled.button<ButtonProps>`
   cursor: pointer;
@@ -73,14 +78,6 @@ export const Button = styled.button<ButtonProps>`
     }
   }
 
-  ${({ spanned }) => {
-    if (spanned) {
-      return css`
-        grid-column: span 2;
-      `
-    }
-  }}
-
   ${({ rounded }) => {
     if (rounded) {
       return css`
@@ -89,9 +86,9 @@ export const Button = styled.button<ButtonProps>`
     }
   }}
 
-  ${({ control, operation }) => {
+  ${({ control, operation, theme }) => {
     return css`
-      background-color: ${control ? 'skyblue' : operation ? 'gray' : 'var(--color-light)'};
+      background-color: ${theme.colors.button[control ? 'control' : operation ? 'operation' : 'basic']};
     `
   }}
 `
