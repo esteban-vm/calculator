@@ -323,6 +323,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
       </button>
       <button
         class="emotion-5"
+        title="Toggle theme"
       >
         🌑
       </button>

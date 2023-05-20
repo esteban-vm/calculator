@@ -56,7 +56,7 @@ const Calculator: FC = () => {
           .
         </Styled.Button>
         <Styled.Button onClick={appendValue}>0</Styled.Button>
-        <Styled.Button control onClick={toggleTheme}>
+        <Styled.Button control onClick={toggleTheme} title='Toggle theme'>
           {themeName === 'dark' ? '☀️' : '🌑'}
         </Styled.Button>
         <Styled.Button rounded='right' operation onClick={getResult} title='Equals'>

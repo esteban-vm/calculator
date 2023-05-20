@@ -54,6 +54,10 @@ describe('CALCULATOR TEST SUITE:', () => {
       expect(screen.getByRole('button', { name: /\./, description: /decimal point/i })).toBeInTheDocument()
     })
 
+    it('should render the button to toggle theme', () => {
+      expect(screen.getByRole('button', { name: '🌑', description: /toggle theme/i })).toBeInTheDocument()
+    })
+
     it('should render the button for equals', () => {
       expect(screen.getByRole('button', { name: /=/, description: /equals/i })).toBeInTheDocument()
     })
@@ -121,6 +125,13 @@ describe('CALCULATOR TEST SUITE:', () => {
       await userEvent.click(screen.getByRole('button', { name: /\./, description: /decimal point/i }))
       expect(screen.queryByText(/1\.\./)).not.toBeInTheDocument()
       expect(await screen.findByText(/1\./)).toBeInTheDocument()
+    })
+
+    it('should be able to toggle theme', async () => {
+      expect(localStorage.getItem('calculator:theme')).toBe('"light"')
+      await userEvent.click(screen.getByRole('button', { name: '🌑', description: /toggle theme/i }))
+      expect(localStorage.getItem('calculator:theme')).toBe('"dark"')
+      expect(await screen.findByRole('button', { name: '☀️', description: /toggle theme/i })).toBeInTheDocument()
     })
   })
 
