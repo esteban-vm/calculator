@@ -2,7 +2,8 @@ import type { Theme } from '@/styles'
 import useLocalStorage from 'use-local-storage'
 
 const useTheme = () => {
-  const [themeName, setThemeName] = useLocalStorage<Theme['name']>('calculator:theme', 'light')
+  const { matches } = matchMedia('(prefers-color-scheme: light)')
+  const [themeName, setThemeName] = useLocalStorage<Theme['name']>('calculator:theme', matches ? 'light' : 'dark')
 
   const toggleTheme = () => {
     setThemeName((prev) => (prev === 'dark' ? 'light' : 'dark'))

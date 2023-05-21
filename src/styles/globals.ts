@@ -1,36 +1,4 @@
-import { css, type Theme } from '@emotion/react'
-
-const light: Theme = {
-  name: 'light',
-  colors: {
-    background: {
-      primary: '#56ccf2',
-      secondary: '#2f80ed',
-    },
-    button: {
-      basic: '#ffffffbf',
-      control: 'skyblue',
-      operation: 'gray',
-    },
-  },
-}
-
-const dark: Theme = {
-  name: 'dark',
-  colors: {
-    background: {
-      primary: '#56ccf2',
-      secondary: '#2f80ed',
-    },
-    button: {
-      basic: '#ffffffbf',
-      control: 'skyblue',
-      operation: 'gray',
-    },
-  },
-}
-
-export const themes: Record<Theme['name'], Theme> = { light, dark }
+import { css } from '@emotion/react'
 
 enum devices {
   /** smartphones, touchscreens */
@@ -45,7 +13,7 @@ enum devices {
 
 export const mediaQuery = (device: keyof typeof devices) => `@media ${devices[device]}`
 
-export const globalStyles = css`
+export const globals = css`
   @import url('css/normalize.min.css');
 
   :root {
@@ -69,6 +37,3 @@ export const globalStyles = css`
     }
   }
 `
-
-export * from '@emotion/react'
-export { default as styled } from '@emotion/styled'

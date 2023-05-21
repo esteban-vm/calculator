@@ -1,13 +1,13 @@
 import { Calculator } from '@/components'
 import { useTheme } from '@/hooks'
-import { Global, globalStyles, ThemeProvider, themes } from '@/styles'
+import { Global, globals, ThemeProvider, themes } from '@/styles'
 
 export default function App() {
   const { name } = useTheme()
 
   return (
     <>
-      <Global styles={globalStyles} />
+      <Global styles={globals} />
       <ThemeProvider theme={themes[name]}>
         <Calculator />
       </ThemeProvider>
