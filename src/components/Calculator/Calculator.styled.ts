@@ -9,7 +9,7 @@ export const Wrapper = styled.main`
 
   ${({ theme }) => {
     return css`
-      background: linear-gradient(to right, ${theme.colors.background.primary}, ${theme.colors.background.secondary});
+      background: linear-gradient(to right, ${theme.colors.color1}, ${theme.colors.color2});
     `
   }}
 `
@@ -20,7 +20,7 @@ export const Container = styled.section`
   grid-template-rows: repeat(7, calc(100% / 7));
   width: 400px;
   height: 650px;
-  box-shadow: 2px 2px 10px var(--color-darker);
+  box-shadow: 2px 2px 10px #333;
   border-radius: 10px;
 
   ${mediaQuery('touch')} {
@@ -41,7 +41,7 @@ export const Screen = styled.header`
   justify-content: space-around;
   flex-direction: column;
   padding: 10px;
-  background-color: var(--color-dark);
+  background-color: #3c4043bf;
   word-wrap: break-word;
   word-break: break-all;
   text-align: right;
@@ -50,12 +50,12 @@ export const Screen = styled.header`
 `
 
 export const Previous = styled.div`
-  color: var(--color-light);
+  color: #ffffffbf;
   font-size: 1.5rem;
 `
 
 export const Current = styled.div`
-  color: var(--color-white);
+  color: #fff;
   font-size: 3rem;
 `
 
@@ -65,7 +65,7 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   user-select: none;
   font-size: 2rem;
-  border: 1px outset var(--color-white);
+  border: 1px outset #fff;
   outline: none;
 
   :active {
@@ -74,7 +74,7 @@ export const Button = styled.button<ButtonProps>`
 
   ${mediaQuery('mouse')} {
     :hover {
-      background-color: var(--color-lighter);
+      background-color: #ffffffe6;
     }
   }
 
@@ -88,7 +88,7 @@ export const Button = styled.button<ButtonProps>`
 
   ${({ control, operation, theme }) => {
     return css`
-      background-color: ${theme.colors.button[control ? 'control' : operation ? 'operation' : 'basic']};
+      background-color: ${theme.colors[control ? 'color4' : operation ? 'color3' : 'color5']};
     `
   }}
 `

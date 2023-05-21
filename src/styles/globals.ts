@@ -16,14 +16,6 @@ export const mediaQuery = (device: keyof typeof devices) => `@media ${devices[de
 export const globals = css`
   @import url('css/normalize.min.css');
 
-  :root {
-    --color-white: #fff;
-    --color-dark: rgba(60, 64, 67, 0.75);
-    --color-darker: #333;
-    --color-light: rgba(255, 255, 255, 0.75);
-    --color-lighter: rgba(255, 255, 255, 0.9);
-  }
-
   * {
     font-family: sans-serif;
     font-weight: normal;
