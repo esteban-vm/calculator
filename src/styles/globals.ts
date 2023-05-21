@@ -2,13 +2,13 @@ import { css } from '@emotion/react'
 
 enum devices {
   /** smartphones, touchscreens */
-  touch = '(hover: none) and (pointer: coarse)',
+  touch = '(hover: none), (pointer: coarse)',
   /** stylus-based screens */
-  stylus = '(hover: none) and (pointer: fine)',
+  stylus = '(hover: none), (pointer: fine)',
   /** Nintendo Wii controller, Microsoft Kinect */
-  other = '(hover: hover) and (pointer: coarse)',
+  other = '(hover: hover), (pointer: coarse)',
   /** mouse, touch pad */
-  mouse = '(hover: hover) and (pointer: fine)',
+  mouse = '(hover: hover), (pointer: fine)',
 }
 
 export const mediaQuery = (device: keyof typeof devices) => `@media ${devices[device]}`
