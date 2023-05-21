@@ -96,7 +96,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   transform: scale(0.98);
 }
 
-@media (hover: hover), (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .emotion-5:hover {
     background-color: #ffffffe6;
   }
@@ -121,7 +121,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   transform: scale(0.98);
 }
 
-@media (hover: hover), (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .emotion-8:hover {
     background-color: #ffffffe6;
   }
@@ -146,7 +146,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   transform: scale(0.98);
 }
 
-@media (hover: hover), (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .emotion-9:hover {
     background-color: #ffffffe6;
   }
@@ -172,7 +172,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   transform: scale(0.98);
 }
 
-@media (hover: hover), (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .emotion-21:hover {
     background-color: #ffffffe6;
   }
@@ -198,7 +198,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   transform: scale(0.98);
 }
 
-@media (hover: hover), (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .emotion-24:hover {
     background-color: #ffffffe6;
   }
