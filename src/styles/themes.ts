@@ -22,4 +22,6 @@ const dark: Theme = {
   },
 }
 
-export const themes: Record<Theme['name'], Theme> = { light, dark }
+const themes: Record<Theme['name'], Theme> = { light, dark }
+
+export default themes

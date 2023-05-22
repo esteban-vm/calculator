@@ -1,4 +1,4 @@
-import { styled, css, mediaQuery } from '@/styles'
+import { styled, css } from '@/styles'
 
 export const Wrapper = styled.main`
   display: flex;
@@ -23,9 +23,11 @@ export const Container = styled.section`
   box-shadow: 2px 2px 10px #333;
   border-radius: 10px;
 
-  ${mediaQuery('touch')} {
-    width: 90%;
-    height: 70%;
+  @media (pointer: coarse) {
+    @media (orientation: portrait) {
+      width: 90%;
+      height: 70%;
+    }
 
     @media (orientation: landscape) {
       width: 50%;
@@ -68,11 +70,7 @@ export const Button = styled.button<ButtonProps>`
   border: 1px outset #fff;
   outline: none;
 
-  :active {
-    transform: scale(0.98);
-  }
-
-  ${mediaQuery('mouse')} {
+  @media (pointer: fine) {
     :hover {
       background-color: #ffffffe6;
     }

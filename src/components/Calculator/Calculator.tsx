@@ -16,50 +16,64 @@ const Calculator: FC = () => {
           </Styled.Previous>
           <Styled.Current>{current}</Styled.Current>
         </Styled.Screen>
-        <Styled.Button control onClick={clearAll} title='All clear'>
+        <Styled.Button onClick={clearAll} data-key='shift+backspace' title='All clear (shift+backspace)' control>
           AC
         </Styled.Button>
-        <Styled.Button control onClick={clearEntry} title='Clear entry'>
+        <Styled.Button onClick={clearEntry} data-key='backspace' title='Clear entry (backspace)' control>
           CE
         </Styled.Button>
-        <Styled.Button control onClick={toggleSign} title='Toggle sign'>
+        <Styled.Button onClick={toggleSign} data-key='shift+s' title='Toggle sign (shift+s)' control>
           +/-
         </Styled.Button>
-        <Styled.Button operation onClick={chooseOperation} title='Divide'>
+        <Styled.Button onClick={chooseOperation} data-key='/' title='Divide' operation>
           ÷
         </Styled.Button>
-        {[7, 8, 9].map((value) => (
-          <Styled.Button key={crypto.randomUUID()} onClick={appendValue}>
-            {value}
-          </Styled.Button>
-        ))}
-        <Styled.Button operation onClick={chooseOperation} title='Multiply'>
+        <Styled.Button onClick={appendValue} data-key='7' title='Seven'>
+          7
+        </Styled.Button>
+        <Styled.Button onClick={appendValue} data-key='8' title='Eight'>
+          8
+        </Styled.Button>
+        <Styled.Button onClick={appendValue} data-key='9' title='Nine'>
+          9
+        </Styled.Button>
+        <Styled.Button onClick={chooseOperation} data-key='*' title='Multiply' operation>
           ×
         </Styled.Button>
-        {[4, 5, 6].map((value) => (
-          <Styled.Button key={crypto.randomUUID()} onClick={appendValue}>
-            {value}
-          </Styled.Button>
-        ))}
-        <Styled.Button operation onClick={chooseOperation} title='Add'>
+        <Styled.Button onClick={appendValue} data-key='4' title='Four'>
+          4
+        </Styled.Button>
+        <Styled.Button onClick={appendValue} data-key='5' title='Five'>
+          5
+        </Styled.Button>
+        <Styled.Button onClick={appendValue} data-key='6' title='Six'>
+          6
+        </Styled.Button>
+        <Styled.Button onClick={chooseOperation} data-key='plus' title='Add' operation>
           +
         </Styled.Button>
-        {[1, 2, 3].map((value) => (
-          <Styled.Button key={crypto.randomUUID()} onClick={appendValue}>
-            {value}
-          </Styled.Button>
-        ))}
-        <Styled.Button operation onClick={chooseOperation} title='Subtract'>
+        <Styled.Button onClick={appendValue} data-key='1' title='One'>
+          1
+        </Styled.Button>
+        <Styled.Button onClick={appendValue} data-key='2' title='Two'>
+          2
+        </Styled.Button>
+        <Styled.Button onClick={appendValue} data-key='3' title='Three'>
+          3
+        </Styled.Button>
+        <Styled.Button onClick={chooseOperation} data-key='minus' title='Subtract' operation>
           -
         </Styled.Button>
-        <Styled.Button rounded='left' control onClick={appendValue} title='Decimal point'>
+        <Styled.Button onClick={appendValue} data-key='.' title='Decimal point' rounded='left' control>
           .
         </Styled.Button>
-        <Styled.Button onClick={appendValue}>0</Styled.Button>
-        <Styled.Button control onClick={toggleTheme} title='Toggle theme'>
+        <Styled.Button onClick={appendValue} data-key='0' title='Zero'>
+          0
+        </Styled.Button>
+        <Styled.Button onClick={toggleTheme} data-key='shift+t' title='Toggle theme (shift+t)' control>
           {themeName === 'dark' ? '☀️' : '🌑'}
         </Styled.Button>
-        <Styled.Button rounded='right' operation onClick={getResult} title='Equals'>
+        <Styled.Button onClick={getResult} data-key='enter' title='Equals' rounded='right' operation>
           =
         </Styled.Button>
       </Styled.Container>

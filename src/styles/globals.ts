@@ -1,19 +1,6 @@
 import { css } from '@emotion/react'
 
-enum devices {
-  /** smartphones, touchscreens */
-  touch = '(hover: none), (pointer: coarse)',
-  /** stylus-based screens */
-  stylus = '(hover: none) and (pointer: fine)',
-  /** Nintendo Wii controller, Microsoft Kinect */
-  other = '(hover: hover), (pointer: coarse)',
-  /** mouse, touch pad */
-  mouse = '(hover: hover) and (pointer: fine)',
-}
-
-export const mediaQuery = (device: keyof typeof devices) => `@media ${devices[device]}`
-
-export const globals = css`
+const globals = css`
   @import url('css/normalize.min.css');
 
   * {
@@ -24,8 +11,15 @@ export const globals = css`
   html {
     font-size: 16px;
 
-    ${mediaQuery('touch')} {
+    @media (pointer: coarse) {
       font-size: 12px;
     }
   }
+
+  .clicked,
+  button:active {
+    transform: scale(0.98);
+  }
 `
+
+export default globals

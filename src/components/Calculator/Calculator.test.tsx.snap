@@ -30,10 +30,12 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   border-radius: 10px;
 }
 
-@media (hover: none), (pointer: coarse) {
-  .emotion-1 {
-    width: 90%;
-    height: 70%;
+@media (pointer: coarse) {
+  @media (orientation: portrait) {
+    .emotion-1 {
+      width: 90%;
+      height: 70%;
+    }
   }
 
   @media (orientation: landscape) {
@@ -89,14 +91,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   background-color: #fffbc4;
 }
 
-.emotion-5:active {
-  -webkit-transform: scale(0.98);
-  -moz-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  transform: scale(0.98);
-}
-
-@media (hover: hover) and (pointer: fine) {
+@media (pointer: fine) {
   .emotion-5:hover {
     background-color: #ffffffe6;
   }
@@ -114,14 +109,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   background-color: #ffc78c;
 }
 
-.emotion-8:active {
-  -webkit-transform: scale(0.98);
-  -moz-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  transform: scale(0.98);
-}
-
-@media (hover: hover) and (pointer: fine) {
+@media (pointer: fine) {
   .emotion-8:hover {
     background-color: #ffffffe6;
   }
@@ -139,14 +127,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   background-color: #fffbe7;
 }
 
-.emotion-9:active {
-  -webkit-transform: scale(0.98);
-  -moz-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  transform: scale(0.98);
-}
-
-@media (hover: hover) and (pointer: fine) {
+@media (pointer: fine) {
   .emotion-9:hover {
     background-color: #ffffffe6;
   }
@@ -165,14 +146,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   background-color: #fffbc4;
 }
 
-.emotion-21:active {
-  -webkit-transform: scale(0.98);
-  -moz-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  transform: scale(0.98);
-}
-
-@media (hover: hover) and (pointer: fine) {
+@media (pointer: fine) {
   .emotion-21:hover {
     background-color: #ffffffe6;
   }
@@ -191,14 +165,7 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
   background-color: #ffc78c;
 }
 
-.emotion-24:active {
-  -webkit-transform: scale(0.98);
-  -moz-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  transform: scale(0.98);
-}
-
-@media (hover: hover) and (pointer: fine) {
+@media (pointer: fine) {
   .emotion-24:hover {
     background-color: #ffffffe6;
   }
@@ -225,110 +192,140 @@ exports[`CALCULATOR TEST SUITE: > style tests: > should have correct styles 1`] 
       </header>
       <button
         class="emotion-5"
-        title="All clear"
+        data-key="shift+backspace"
+        title="All clear (shift+backspace)"
       >
         AC
       </button>
       <button
         class="emotion-5"
-        title="Clear entry"
+        data-key="backspace"
+        title="Clear entry (backspace)"
       >
         CE
       </button>
       <button
         class="emotion-5"
-        title="Toggle sign"
+        data-key="shift+s"
+        title="Toggle sign (shift+s)"
       >
         +/-
       </button>
       <button
         class="emotion-8"
+        data-key="/"
         title="Divide"
       >
         ÷
       </button>
       <button
         class="emotion-9"
+        data-key="7"
+        title="Seven"
       >
         7
       </button>
       <button
         class="emotion-9"
+        data-key="8"
+        title="Eight"
       >
         8
       </button>
       <button
         class="emotion-9"
+        data-key="9"
+        title="Nine"
       >
         9
       </button>
       <button
         class="emotion-8"
+        data-key="*"
         title="Multiply"
       >
         ×
       </button>
       <button
         class="emotion-9"
+        data-key="4"
+        title="Four"
       >
         4
       </button>
       <button
         class="emotion-9"
+        data-key="5"
+        title="Five"
       >
         5
       </button>
       <button
         class="emotion-9"
+        data-key="6"
+        title="Six"
       >
         6
       </button>
       <button
         class="emotion-8"
+        data-key="plus"
         title="Add"
       >
         +
       </button>
       <button
         class="emotion-9"
+        data-key="1"
+        title="One"
       >
         1
       </button>
       <button
         class="emotion-9"
+        data-key="2"
+        title="Two"
       >
         2
       </button>
       <button
         class="emotion-9"
+        data-key="3"
+        title="Three"
       >
         3
       </button>
       <button
         class="emotion-8"
+        data-key="minus"
         title="Subtract"
       >
         -
       </button>
       <button
         class="emotion-21"
+        data-key="."
         title="Decimal point"
       >
         .
       </button>
       <button
         class="emotion-9"
+        data-key="0"
+        title="Zero"
       >
         0
       </button>
       <button
         class="emotion-5"
-        title="Toggle theme"
+        data-key="shift+t"
+        title="Toggle theme (shift+t)"
       >
         🌑
       </button>
       <button
         class="emotion-24"
+        data-key="enter"
         title="Equals"
       >
         =
