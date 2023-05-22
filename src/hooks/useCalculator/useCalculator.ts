@@ -8,6 +8,7 @@ const useCalculator = () => {
   const [operation, setOperation] = useState<Operation>('')
 
   const appendValue: MouseEventHandler<HTMLButtonElement> = (event) => {
+    if (current.length === 10) return
     const value = event.currentTarget.textContent as string
     if (value !== '.' && current === '0') setCurrent(value)
     else if (value === '.' && current.includes(value)) return
@@ -54,7 +55,7 @@ const useCalculator = () => {
 
     switch (operation) {
       case '÷':
-        result = String(previousNumber / currentNumber)
+        result = String(Number((previousNumber / currentNumber).toFixed(5)))
         break
       case '×':
         result = String(previousNumber * currentNumber)

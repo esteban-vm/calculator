@@ -64,6 +64,13 @@ describe('CALCULATOR TEST SUITE:', () => {
   })
 
   describe('control tests:', () => {
+    it('should not be able to write numbers of more than 10 digits', async () => {
+      for (let time = 1; time <= 11; time++) {
+        await userEvent.click(screen.getByRole('button', { name: /1/, description: /one/i }))
+      }
+      expect(await screen.findByText(/1{10}/)).toBeInTheDocument()
+    })
+
     it('should be able to clear all (e.g. 51 => "")', async () => {
       await userEvent.click(screen.getByRole('button', { name: /5/, description: /five/i }))
       await userEvent.click(screen.getByRole('button', { name: /1/, description: /one/i }))
