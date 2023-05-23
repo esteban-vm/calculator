@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { type FC, useEffect } from 'react'
 import { useCalculator, useTheme } from '@/hooks'
 import * as Styled from './Calculator.styled'
 
@@ -6,6 +6,16 @@ const Calculator: FC = () => {
   const { toggle: toggleTheme } = useTheme()
   const { previous, current, operation, appendValue, clearEntry, clearAll, chooseOperation, getResult, toggleSign } =
     useCalculator()
+
+  useEffect(() => {
+    const listener = (event: MouseEvent) => {
+      const isButton = (event.target as HTMLElement).nodeName === 'BUTTON'
+      if (isButton) navigator.vibrate?.(50)
+    }
+
+    window.addEventListener('click', listener)
+    return () => window.removeEventListener('click', listener)
+  }, [])
 
   return (
     <Styled.Wrapper>
