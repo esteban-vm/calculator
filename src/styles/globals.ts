@@ -2,6 +2,7 @@ import { css } from '@emotion/react'
 
 const globals = css`
   @import url('css/normalize.min.css');
+  @import url('css/animate.min.css');
 
   * {
     font-family: sans-serif;

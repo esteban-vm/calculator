@@ -64,6 +64,11 @@ describe('CALCULATOR TEST SUITE:', () => {
   })
 
   describe('control tests:', () => {
+    it('should vibrate when pressing a button', async () => {
+      await userEvent.click(screen.getByRole('button', { name: /1/, description: /one/i }))
+      expect(navigator.vibrate).toHaveBeenCalledWith(50)
+    })
+
     it('should not be able to write numbers of more than 10 digits', async () => {
       for (let time = 1; time <= 11; time++) {
         await userEvent.click(screen.getByRole('button', { name: /1/, description: /one/i }))

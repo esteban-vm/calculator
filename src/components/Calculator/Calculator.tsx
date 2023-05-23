@@ -9,7 +9,7 @@ const Calculator: FC = () => {
 
   return (
     <Styled.Wrapper>
-      <Styled.Container aria-label='Calculator'>
+      <Styled.Container aria-label='Calculator' className='animate__animated animate__fadeInDown'>
         <Styled.Screen>
           <Styled.Previous>
             {previous} {operation}

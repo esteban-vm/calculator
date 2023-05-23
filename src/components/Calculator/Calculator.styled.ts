@@ -4,8 +4,8 @@ export const Wrapper = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
 
   ${({ theme }) => {
     return css`
@@ -18,10 +18,10 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(7, calc(100% / 7));
-  width: 400px;
-  height: 650px;
   box-shadow: 2px 2px 10px #333;
   border-radius: 10px;
+  width: 400px;
+  height: 650px;
 
   @media (pointer: coarse) {
     @media (orientation: portrait) {
