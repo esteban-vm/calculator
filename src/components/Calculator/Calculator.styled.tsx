@@ -1,3 +1,4 @@
+import type { FC, MouseEventHandler, HTMLAttributes } from 'react'
 import { styled, css } from '@/styles'
 
 export const Wrapper = styled.main`
@@ -61,9 +62,25 @@ export const Current = styled.div`
   font-size: 3rem;
 `
 
-type ButtonProps = { rounded?: 'right' | 'left'; operation?: boolean; control?: boolean }
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  onClick: MouseEventHandler<HTMLButtonElement>
+  'data-key': string
+  title: string
+  rounded?: 'right' | 'left'
+  operation?: boolean
+  control?: boolean
+}
 
-export const Button = styled.button<ButtonProps>`
+export const Button: FC<ButtonProps> = ({ onClick, ...rest }) => {
+  const handleClick: typeof onClick = (event) => {
+    onClick(event)
+    navigator.vibrate?.(50)
+  }
+
+  return <StyledButton onClick={handleClick} {...rest} />
+}
+
+const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   user-select: none;
   font-size: 2rem;

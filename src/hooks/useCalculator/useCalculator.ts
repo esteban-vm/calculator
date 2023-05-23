@@ -14,19 +14,16 @@ const useCalculator = () => {
     else if (value === '.' && current.includes(value)) return
     else if (value === '.' && current === '') setCurrent('0'.concat(value))
     else setCurrent(current.concat(value))
-    shake()
   }
 
   const clearEntry = () => {
     setCurrent(current.slice(0, -1))
-    shake()
   }
 
   const clearAll = () => {
     setCurrent('')
     setPrevious('')
     setOperation('')
-    shake()
   }
 
   const chooseOperation: MouseEventHandler<HTMLButtonElement> = (event) => {
@@ -35,7 +32,6 @@ const useCalculator = () => {
     else setPrevious(Number(current).toString())
     setCurrent('')
     setOperation(event.currentTarget.textContent as Operation)
-    shake()
   }
 
   const getResult = () => {
@@ -44,13 +40,11 @@ const useCalculator = () => {
     setCurrent(result)
     setPrevious('')
     setOperation('')
-    shake()
   }
 
   const toggleSign = () => {
     if (!current) return
     setCurrent(String(-current))
-    shake()
   }
 
   const compute = () => {
@@ -75,10 +69,6 @@ const useCalculator = () => {
     }
 
     return result
-  }
-
-  const shake = () => {
-    navigator.vibrate?.(50)
   }
 
   return { previous, current, operation, appendValue, clearEntry, clearAll, chooseOperation, getResult, toggleSign }
