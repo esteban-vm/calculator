@@ -55,7 +55,7 @@ describe('CALCULATOR TEST SUITE:', () => {
     })
 
     it('should render the button to toggle theme', () => {
-      expect(screen.getByRole('button', { description: /toggle theme/i })).toBeInTheDocument()
+      expect(screen.getByRole('button', { name: '🎨', description: /toggle theme/i })).toBeInTheDocument()
     })
 
     it('should render the button for equals', () => {
@@ -141,7 +141,7 @@ describe('CALCULATOR TEST SUITE:', () => {
 
     it('should be able to toggle theme', async () => {
       expect(localStorage.getItem('calculator:theme')).toBe('"light"')
-      await userEvent.click(screen.getByRole('button', { description: /toggle theme/i }))
+      await userEvent.click(screen.getByRole('button', { name: '🎨', description: /toggle theme/i }))
       expect(localStorage.getItem('calculator:theme')).toBe('"dark"')
     })
   })
