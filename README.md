@@ -1,4 +1,4 @@
-# Calculator app created with [Vite](https://v2.vitejs.dev/)
+**Calculator app** created with [Vite](https://v2.vitejs.dev/)
 
 ![Calculator light mode screenshot](/screenshot_light_mode.jpeg "Calculator light mode screenshot")
 
