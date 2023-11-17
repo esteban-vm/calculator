@@ -1,4 +1,4 @@
-**Calculator app** created with [Vite](https://v2.vitejs.dev/)
+# Calculator app
 
 ## Main dependencies:
 - [Vite](https://v2.vitejs.dev/)
