@@ -1,6 +1,7 @@
 # Calculator app
 
 ## Main dependencies:
+- [React](https://es.react.dev/)
 - [Vite](https://v2.vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Emotion](https://emotion.sh/)
