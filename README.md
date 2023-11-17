@@ -14,7 +14,7 @@
 - Light/Dark modes
 
 ## License:
-This project is released under the MIT [LICENSE](/LICENSE).
+This project is released under the MIT [LICENSE](/LICENSE)
 
 ![Calculator light mode screenshot](/screenshot_light_mode.jpeg "Calculator light mode screenshot")
 
